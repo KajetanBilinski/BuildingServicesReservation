@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj": {}
+    "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj": {
+    "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj",
+        "projectUniqueName": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj",
         "projectName": "ProjektAplikacjaBudowlanka",
-        "projectPath": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj",
+        "projectPath": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka.csproj",
         "packagesPath": "C:\\Users\\Kajeb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\ProjektAplikacjaBudowlanka\\obj\\",
+        "outputPath": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -22,15 +22,15 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net6.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -41,8 +41,18 @@
         }
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[7.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -62,7 +72,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

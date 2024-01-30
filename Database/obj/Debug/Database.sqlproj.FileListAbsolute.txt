@@ -1,0 +1,10 @@
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\bin\Debug\Database.dacpac
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\bin\Debug\Database.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\bin\Debug\Database.pdb
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\Database.sqlproj.AssemblyReference.cache
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\Model.xml
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\refactor.xml
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\postdeploy.sql
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\predeploy.sql
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\Database.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\Database\obj\Debug\Database.pdb

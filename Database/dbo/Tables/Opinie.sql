@@ -2,10 +2,10 @@
     [idOpinia]       INT           NOT NULL,
     [Opis]           VARCHAR (500) NOT NULL,
     [Ocena]          INT           NOT NULL,
-    [dUslugodawca]   INT           NOT NULL,
+    [idUslugodawca]  INT           NOT NULL,
     [idUslugobiorca] INT           NOT NULL,
     CONSTRAINT [Opinie_pk] PRIMARY KEY CLUSTERED ([idOpinia] ASC),
     CONSTRAINT [Opinie_Uslugobiorca] FOREIGN KEY ([idUslugobiorca]) REFERENCES [dbo].[Uslugobiorca] ([idUslugobiorca]),
-    CONSTRAINT [Opinie_Uslugodawca] FOREIGN KEY ([dUslugodawca]) REFERENCES [dbo].[Uslugodawca] ([idUslugodawca])
+    CONSTRAINT [Opinie_Uslugodawca] FOREIGN KEY ([idUslugodawca]) REFERENCES [dbo].[Uslugodawca] ([idUslugodawca])
 );
 
