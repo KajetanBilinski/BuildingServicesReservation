@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjektAplikacjaBudowlanka.DBModels;
 using ProjektAplikacjaBudowlanka.Models;
@@ -9,22 +10,20 @@ namespace ProjektAplikacjaBudowlanka.Controllers
     public class HomeController : Controller
     {
         private readonly BudowlankaDBContext _budowlankaContext;
+        private readonly ILogger<HomeController> _logger;
 
-        public HomeController(BudowlankaDBContext budowlankaContext)
+        public HomeController(BudowlankaDBContext budowlankaContext, ILogger<HomeController> logger)
         {
             _budowlankaContext = budowlankaContext;
+            _logger = logger;
         }
-
+        [AllowAnonymous]
+        public IActionResult AccessDenied()
+        {
+            return View();
+        }
         public async Task<IActionResult> Index()
         {
-            var pracownicy = await _budowlankaContext.Pracownik.ToListAsync();
-            Console.WriteLine(pracownicy.Count);
-            Pracownik p = new Pracownik();
-            p.idPracownik = 1;
-            p.Imie = "Jerzy";
-            p.Nazwisko = "Baron";
-            await _budowlankaContext.Pracownik.AddAsync(p);
-            await _budowlankaContext.SaveChangesAsync();
             return View();
         }
 

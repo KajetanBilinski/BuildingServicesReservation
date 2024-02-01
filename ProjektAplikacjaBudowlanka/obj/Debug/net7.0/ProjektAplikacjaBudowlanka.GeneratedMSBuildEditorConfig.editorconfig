@@ -18,6 +18,14 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Auth/Login.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxMb2dpbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Auth/Register.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,12 +34,40 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Oferta/AddOferta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhXEFkZE9mZXJ0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Oferta/BookOferta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhXEJvb2tPZmVydGEuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Oferta/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Oferta/UpdateOferta.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT2ZlcnRhXFVwZGF0ZU9mZXJ0YS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Pracownik/AddPracownik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY293bmlrXEFkZFByYWNvd25pay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Pracownik/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJhY293bmlrXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/User/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kajeb/source/repos/ProjektAplikacjaBudowlanka/BuildingServicesReservation/ProjektAplikacjaBudowlanka/Views/_ViewImports.cshtml]
