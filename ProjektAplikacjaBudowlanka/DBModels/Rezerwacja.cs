@@ -8,6 +8,7 @@ public class Rezerwacja
     public DateTime DataOd { get; set; }
     public DateTime DataDo { get; set; }
     public decimal Koszt { get; set; }
+    public string Status { get; set; }
     public bool CzyZaplacone { get; set; }
     public int idUslugobiorca{ get; set; }
     public int idOferta{ get; set; }

@@ -70,3 +70,9 @@ C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservati
 C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
 C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\obj\Debug\net7.0\ProjektAplikacjaBudowlanka.sourcelink.json
 C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\Microsoft.Data.Sqlite.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\SQLitePCLRaw.core.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\runtimes\linux-x64\native\libsqlite3.so
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\runtimes\osx-x64\native\libsqlite3.dylib
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\runtimes\win7-x64\native\sqlite3.dll
+C:\Users\Kajeb\source\repos\ProjektAplikacjaBudowlanka\BuildingServicesReservation\ProjektAplikacjaBudowlanka\bin\Debug\net7.0\runtimes\win7-x86\native\sqlite3.dll

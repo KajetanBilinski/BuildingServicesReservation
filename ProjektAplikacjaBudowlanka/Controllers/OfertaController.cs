@@ -1,11 +1,13 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Identity.Client;
 using ProjektAplikacjaBudowlanka.DBModels;
 using ProjektAplikacjaBudowlanka.Models;
 using ProjektAplikacjaBudowlanka.Models.DTO.Oferta;
 using ProjektAplikacjaBudowlanka.Models.DTO.Pracownik;
 using ProjektAplikacjaBudowlanka.Models.DTO.Rezerwacja;
+using System.Data;
 using System.Diagnostics;
 using System.Security.Claims;
 
@@ -27,36 +29,21 @@ namespace ProjektAplikacjaBudowlanka.Controllers
             var idUser = int.Parse(User.FindFirstValue(ClaimTypes.Sid)!);
             var u = await _budowlankaContext.User.Where(u => u.idUser == idUser).FirstOrDefaultAsync();
             List<OfertaSelectDTO> list = new List<OfertaSelectDTO>();
-            if(User.FindFirstValue(ClaimTypes.Role)=="Firma")
-            {
-                foreach (var o in await _budowlankaContext.Oferta.Where(us => us.idUslugodawca == u.idUslugodawca).ToListAsync())
-                {
-                    var ilosc = _budowlankaContext.Rezerwacja.Where(r => r.idOferta == o.idOferta).Count();
-                    list.Add(new OfertaSelectDTO()
-                    {
-                        Id = o.idOferta,
-                        Nazwa = o.Nazwa,
-                        Opis = o.Opis,
-                        Dniowka = o.Dniowka,
-                        IloscRezerwacji = ilosc
-                    });
-                }
-            }
-            else
-            {
+
                 foreach (var o in await _budowlankaContext.Oferta.ToListAsync())
                 {
                     var ilosc = _budowlankaContext.Rezerwacja.Where(r => r.idOferta == o.idOferta).Count();
+                    var ekipa = await _budowlankaContext.Uslugodawca.Where(u => u.idUslugodawca == o.idUslugodawca).FirstOrDefaultAsync();
                     list.Add(new OfertaSelectDTO()
                     {
                         Id = o.idOferta,
                         Nazwa = o.Nazwa,
+                        Ekipa = ekipa.Nazwa,
                         Opis = o.Opis,
                         Dniowka = o.Dniowka,
                         IloscRezerwacji = ilosc
                     });
                 }
-            }
             return View(list);
         }
         [Authorize(Roles = "Firma")]
@@ -188,7 +175,7 @@ namespace ProjektAplikacjaBudowlanka.Controllers
             {
                 TempData["SuccessMessage"] = "Okres jest niepoprawny";
             }
-            else if(rezerwacja.DataDo < DateTime.Now)
+            else if(rezerwacja.DataDo.Date < DateTime.Now)
             {
                 ViewData["DataDoSpan"] = "Data do jest niepoprawna";
             }
@@ -198,6 +185,12 @@ namespace ProjektAplikacjaBudowlanka.Controllers
             }
             if (rezerwacja.DataOd < DateTime.Now || rezerwacja.DataDo < DateTime.Now || rezerwacja.DataOd > rezerwacja.DataDo)
             {
+                return View(rezerwacja);
+            }
+            var canBook = await CanBook(rezerwacja.IdOferta,rezerwacja.DataOd,rezerwacja.DataDo);
+            if(!canBook)
+            {
+                TempData["SuccessMessage"] = "W zadanym okresie znajduje się już rezerwacja";
                 return View(rezerwacja);
             }
 
@@ -213,9 +206,24 @@ namespace ProjektAplikacjaBudowlanka.Controllers
             r.CzyZaplacone = false;
             r.idUslugobiorca = (int)u.idUslugobiorca;
             r.idOferta = rezerwacja.IdOferta;
+            r.Status = "Utworzono";
             await _budowlankaContext.Rezerwacja.AddAsync(r);
             int ok = await _budowlankaContext.SaveChangesAsync();
             return RedirectToAction("Index", "Oferta");
+        }
+        private async Task<bool> CanBook(int idOferta, DateTime dataOd, DateTime dataDo)
+        {
+            var rs = await _budowlankaContext.Rezerwacja.Where(r => r.idOferta == idOferta).ToListAsync();
+            foreach(var r in rs)
+            {
+                if ((dataOd >= r.DataOd && dataOd <= r.DataDo) ||
+                   (dataDo >= r.DataOd && dataDo <= r.DataDo) ||
+                   (dataOd <= r.DataOd && dataDo >= r.DataDo))
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
     }

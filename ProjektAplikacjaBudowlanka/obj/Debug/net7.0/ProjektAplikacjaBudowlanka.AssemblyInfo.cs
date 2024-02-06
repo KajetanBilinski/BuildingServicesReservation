@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjektAplikacjaBudowlanka")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+026cebae73ff8dbdff91ffccba51214cd11202e1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b450188518c65742f122a0a6c6c7c21d20124faf")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjektAplikacjaBudowlanka")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjektAplikacjaBudowlanka")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3WeIvlbeZFrm9Ui0pwY1Tas/aZgTkB9VrkBp3bBHkDM=",
+  "Hash": "AVEVUsTLRycR2H0jLM5AG02FXUytg3cnp74iHRVDxsM=",
   "Source": "ProjektAplikacjaBudowlanka",
   "BasePath": "_content/ProjektAplikacjaBudowlanka",
   "Mode": "Default",
@@ -1193,6 +1193,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\wwwroot\\lib\\Zdjecia\\wykonczenie.jpg",
+      "SourceId": "ProjektAplikacjaBudowlanka",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\wwwroot\\",
+      "BasePath": "_content/ProjektAplikacjaBudowlanka",
+      "RelativePath": "lib/Zdjecia/wykonczenie.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\Zdjecia\\wykonczenie.jpg"
     }
   ]
 }

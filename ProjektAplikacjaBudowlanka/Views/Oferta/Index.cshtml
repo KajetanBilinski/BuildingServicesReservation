@@ -18,10 +18,11 @@ else
 <table class="table">
     <thead>
         <tr>
+            <th>Firma</th>
             <th>Nazwa</th>
             <th>Opis</th>
             <th>Dniówka</th>
-            <th>Liczba ofert</th>
+            <th>Liczba rezerwacji</th>
             <th>Akcje</th>
         </tr>
     </thead>
@@ -29,6 +30,7 @@ else
         @foreach (var oferta in Model)
         {
             <tr>
+                <td>@oferta.Ekipa</td>
                 <td>@oferta.Nazwa</td>
                 <td>@oferta.Opis</td>
                 <td>@oferta.Dniowka</td>
@@ -65,4 +67,7 @@ else
     
 </table>
 }
-<a asp-action="AddOferta" asp-controller="Oferta" class="btn btn-primary">Dodaj nową ofertę</a>
+@if (User.IsInRole("Firma"))
+{
+    <a asp-action="AddOferta" asp-controller="Oferta" class="btn btn-primary">Dodaj nową ofertę</a>
+}

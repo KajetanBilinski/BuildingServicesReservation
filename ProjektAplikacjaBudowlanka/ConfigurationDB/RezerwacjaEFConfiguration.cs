@@ -13,6 +13,7 @@ namespace ProjektAplikacjaBudowlanka.ConfigurationDB
             builder.Property<DateTime>(e => e.DataOd);
             builder.Property<decimal>(e => e.Koszt);
             builder.Property<bool>(e => e.CzyZaplacone);
+            builder.Property<string>(e => e.Status);
             builder.HasOne(e => e.NavigationUslugobiorca)
                 .WithMany(e => e.NavigationRezerwacje)
                 .HasForeignKey(e => e.idUslugobiorca);

@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
+      "Id": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\wwwroot\\lib\\Zdjecia\\wykonczenie.jpg",
+      "PackagePath": "staticwebassets\\lib\\Zdjecia\\wykonczenie.jpg"
+    },
+    {
       "Id": "C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },

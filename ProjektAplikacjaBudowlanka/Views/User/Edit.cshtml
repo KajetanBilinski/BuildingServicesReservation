@@ -1,7 +1,14 @@
 ﻿@using ProjektAplikacjaBudowlanka.Models.DTO
 @model UserSelectDTO
+@if (User.IsInRole("Klient"))
+{
+    <h2>Profil użytkownika</h2>
+}
+else
+{
+    <h2>Profil firmy</h2>
+}
 
-<h2>Profil użytkownika</h2>
 
 @if (TempData["SuccessMessage"] != null)
 {

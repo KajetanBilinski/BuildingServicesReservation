@@ -114,13 +114,16 @@ namespace ProjektAplikacjaBudowlanka.Controllers
                 ViewData["HasloSpan"] = "Hasło nie może być puste";
             if (model.Login is null)
                 ViewData["LoginSpan"] = "Login nie może być pusty";
+            if (_budowlankaContext.User.Any(user => user.Login == model.Login))
+                ViewData["LoginSpan"] = "Podany login jest zajęty";
             if(model.Rodzaj =="Klient")
             {
                 if(model.Imie is null)
                     ViewData["ImieSpan"] = "Imie nie może być puste";
                 if (model.Nazwisko is null)
                     ViewData["NazwiskoSpan"] = "Nazwisko nie może być puste";
-                if (model.Nazwisko is null || model.Imie is null || model.Login is null || model.Haslo is null)
+                if (model.Nazwisko is null || model.Imie is null || model.Login is null || model.Haslo is null
+                    || _budowlankaContext.User.Any(user => user.Login == model.Login))
                     return View(model);
             }
             else
@@ -129,7 +132,10 @@ namespace ProjektAplikacjaBudowlanka.Controllers
                     ViewData["NazwaFirmySpan"] = "Nazwa Firmy nie może być puste";
                 if (model.NIP is null)
                     ViewData["NIPSpan"] = "NIP nie może być puste";
-                if(model.NazwaFirmy is null || model.NIP is null || model.Login is null || model.Haslo is null)
+                if (model.NIP.StartsWith("-"))
+                    ViewData["NIPSpan"] = "NIP nie może być ujemny";
+                if (model.NazwaFirmy is null || model.NIP is null || model.Login is null || model.Haslo is null || model.NIP.StartsWith("-")
+                    || _budowlankaContext.User.Any(user => user.Login == model.Login))
                     return View(model);
             }
             

@@ -3,9 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Authentication.Cookies;
-using System.Runtime.InteropServices;
 var builder = WebApplication.CreateBuilder(args);
 
 
@@ -13,7 +11,13 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<BudowlankaDBContext>(options =>
 {
-    options.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\Kajeb\\source\\repos\\ProjektAplikacjaBudowlanka\\BuildingServicesReservation\\ProjektAplikacjaBudowlanka\\Database\\Database.mdf;Integrated Security=True");
+    options.UseSqlServer("Data Source=(LocalDB)\\MSSQLLocalDB;User ID=sa;Password=admin;");
+}); 
+
+builder.WebHost.UseKestrel(options =>
+{
+    options.Limits.MaxConcurrentConnections = 100;
+    options.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(60);
 });
 
 builder.Services.AddAuthentication(options=>
@@ -57,11 +61,6 @@ app.UseAuthentication()
    .Use(async (context, next) =>
    {
        await next();
-
-       if (context.Response.StatusCode == 401)
-       {
-           Console.WriteLine("LOL");
-       }
    });
 app.UseAuthorization();
 app.UseEndpoints(endpoints =>
@@ -89,6 +88,26 @@ app.UseEndpoints(endpoints =>
           name: "oferta",
           pattern: "oferta/{action=Index}/{id?}",
           defaults: new { controller = "Oferta" });
+
+    endpoints.MapControllerRoute(
+      name: "rezerwacja",
+      pattern: "rezerwacja/{action=Index}/{id?}",
+      defaults: new { controller = "Rezerwacja" });
+
+    endpoints.MapControllerRoute(
+      name: "uslugodawca",
+      pattern: "uslugodawca/{action=Index}/{id?}",
+      defaults: new { controller = "Uslugodawca" });
+
+    endpoints.MapControllerRoute(
+      name: "opinia",
+      pattern: "opinia/{action=Index}/{id?}",
+      defaults: new { controller = "Opinia" });
+
+    endpoints.MapControllerRoute(
+      name: "zdjecie",
+      pattern: "zdjecie/{action=Index}/{id?}",
+      defaults: new { controller = "Zdjecie" });
 });
 
 

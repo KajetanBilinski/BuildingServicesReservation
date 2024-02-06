@@ -25,7 +25,7 @@
         </select>
     </div>
 
-    <div id="klientFields" style="display:none;">
+    <div id="klientFields" style="display:block;">
         <div class="form-group">
             <label asp-for="Imie"></label>
             <span id="ImieSpan" class="text-danger">@ViewData["ImieSpan"]</span>
@@ -42,15 +42,15 @@
 
     <div id="firmaFields" style="display:none;">
         <div class="form-group">
-            <label asp-for="NazwaFirmy"></label>
+            <label asp-for="NazwaFirmy">Nazwa firmy</label>
             <span id="NazwaFirmySpan" class="text-danger">@ViewData["NazwaFirmySpan"]</span>
             <input asp-for="NazwaFirmy" class="form-control"/>
         </div>
 
         <div class="form-group">
-            <label asp-for="NIP"></label>
+            <label asp-for="NIP">NIP</label>
             <span id="NIPSpan" class="text-danger">@ViewData["NIPSpan"]</span>
-            <input asp-for="NIP" class="form-control" />
+            <input asp-for="NIP" type = "number" class="form-control" />
             <span asp-validation-for="NIP" class="text-danger"></span>
         </div>
     </div>
